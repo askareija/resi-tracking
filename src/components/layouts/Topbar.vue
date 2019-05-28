@@ -1,10 +1,10 @@
 <template>
   <v-toolbar app color="primary" dark>
-    <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
+    <v-toolbar-side-icon @click="toggleSidebar"></v-toolbar-side-icon>
     <v-toolbar-title>Resi Tracking</v-toolbar-title>
     <v-spacer></v-spacer>
-    <v-toolbar-items class="hidden-sm-and-down">
-      <v-menu bottom left>
+    <v-toolbar-items class>
+      <v-menu transition="slide-y-transition" bottom>
         <template v-slot:activator="{ on }">
           <v-btn fab dark icon v-on="on">
             <v-avatar>
@@ -15,7 +15,16 @@
 
         <v-list>
           <v-list-tile>
-            <v-list-tile-title>asd</v-list-tile-title>
+            <v-list-tile-title>
+              <v-icon left>receipt</v-icon>
+              <span>Track History</span>
+            </v-list-tile-title>
+          </v-list-tile>
+          <v-list-tile>
+            <v-list-tile-title>
+              <v-icon left>exit_to_app</v-icon>
+              <span>Logout</span>
+            </v-list-tile-title>
           </v-list-tile>
         </v-list>
       </v-menu>
@@ -25,7 +34,12 @@
 
 <script>
 export default {
-  props: ["drawer"]
+  props: ["drawer"],
+  methods: {
+    toggleSidebar() {
+      this.$emit('toggleSidebar')
+    }
+  },
 };
 </script>
 

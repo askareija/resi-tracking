@@ -25,19 +25,19 @@
 
 <script>
 export default {
+  props: ['drawer'],
   data() {
     return {
-      drawer: true,
       loggedIn: true,
       links: [
-        { icon: "receipt", text: "Track Receipt", href: "/" },
-        { icon: "history", text: "Track History", href: "/track_history" },
-        { icon: "settings", text: "Settings", href: "/settings" },
-        { icon: "info", text: "About", href: "/about" }
+        { icon: 'receipt', text: 'Track Receipt', href: '/track_receipt' },
+        { icon: 'history', text: 'Track History', href: '/track_history' },
+        { icon: 'settings', text: 'Settings', href: '/settings' },
+        { icon: 'info', text: 'About', href: '/about' }
       ]
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
