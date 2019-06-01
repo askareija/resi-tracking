@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar/>
+    <Navbar />
     <v-content>
       <v-card flat>
         <v-container fluid>
@@ -12,14 +12,13 @@
 </template>
 
 <script>
-import Navbar from "./layouts/Navbar";
+import Navbar from './layouts/Navbar'
 
 export default {
   components: {
     Navbar
   }
-};
+}
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

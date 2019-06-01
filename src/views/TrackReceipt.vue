@@ -9,47 +9,47 @@
     <!-- Judul -->
     <p class="headline">Track Receipt</p>
 
-    <TrackForm/>
+    <TrackForm />
 
-    <TrackHeaderStatus class="mt-5" v-bind:receipts="receipts"/>
+    <TrackHeaderStatus class="mt-5" v-bind:receipts="receipts" />
     <v-layout wrap class="mt-5">
-      <TrackGeneralInfoTable/>
-      <TrackDetailInfoTable/>
+      <TrackGeneralInfoTable />
+      <TrackDetailInfoTable />
     </v-layout>
   </div>
 </template>
 
 <script>
-import TrackForm from "@/components/Track/TrackForm";
-import TrackHeaderStatus from "@/components/Track/TrackHeaderStatus";
-import TrackGeneralInfoTable from "@/components/Track/TrackGeneralInfoTable";
-import TrackDetailInfoTable from "@/components/Track/TrackDetailInfoTable";
+import TrackForm from '@/components/Track/TrackForm'
+import TrackHeaderStatus from '@/components/Track/TrackHeaderStatus'
+import TrackGeneralInfoTable from '@/components/Track/TrackGeneralInfoTable'
+import TrackDetailInfoTable from '@/components/Track/TrackDetailInfoTable'
 
 export default {
   data() {
     return {
       receipts: {
-        no_resi: "",
-        expedition_type: "",
+        no_resi: '',
+        expedition_type: '',
         isReceived: false,
-        status: "ON PROCESS",
+        status: 'ON PROCESS',
         details: [{}]
       },
       isLoading: false,
       breadcrumbs: [
-        { text: "Home", disabled: true, href: "/" },
-        { text: "Track Receipt", disabled: false, href: "/" }
+        { text: 'Home', disabled: true, href: '/' },
+        { text: 'Track Receipt', disabled: false, href: '/' }
       ]
-    };
+    }
   },
   methods: {
     cekresi() {
       alert(
-        "No Resi: " +
+        'No Resi: ' +
           this.receipts.no_resi +
-          ", Tipe Ekspedisi: " +
+          ', Tipe Ekspedisi: ' +
           this.receipts.expedition_type
-      );
+      )
     }
   },
   components: {
@@ -58,5 +58,5 @@ export default {
     TrackGeneralInfoTable,
     TrackDetailInfoTable
   }
-};
+}
 </script>

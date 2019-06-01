@@ -13,10 +13,10 @@ export default {
   data() {
     return {
       breadcrumbs: [
-        { text: "Home", disabled: true, href: "/" },
-        { text: "Track History", disabled: false, href: "/track_history" }
+        { text: 'Home', disabled: true, href: '/' },
+        { text: 'Track History', disabled: false, href: '/track_history' }
       ]
-    };
+    }
   }
-};
+}
 </script>
