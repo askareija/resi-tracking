@@ -25,6 +25,11 @@ const router = new Router({
           path: '/track_history',
           name: 'trackHistory',
           component: TrackHistory
+        },
+        {
+          path: '/about',
+          name: 'about',
+          component: () => import('./views/About.vue')
         }
       ]
     }
