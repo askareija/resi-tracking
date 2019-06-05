@@ -8,7 +8,10 @@
         <template v-slot:activator="{ on }">
           <v-btn fab dark icon v-on="on">
             <v-avatar>
-              <v-img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John"/>
+              <v-img
+                src="https://cdn.vuetifyjs.com/images/john.jpg"
+                alt="John"
+              />
             </v-avatar>
           </v-btn>
         </template>
@@ -34,14 +37,13 @@
 
 <script>
 export default {
-  props: ["drawer"],
+  props: ['drawer'],
   methods: {
     toggleSidebar() {
       this.$emit('toggleSidebar')
     }
-  },
-};
+  }
+}
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

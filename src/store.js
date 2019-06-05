@@ -8,10 +8,6 @@ export default new Vuex.Store({
     token: {},
     currentUser: {}
   },
-  mutations: {
-
-  },
-  actions: {
-
-  }
+  mutations: {},
+  actions: {}
 })

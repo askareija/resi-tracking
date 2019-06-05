@@ -20,27 +20,26 @@
 export default {
   data() {
     return {
-      search: "",
+      search: '',
       headers: [
         {
-          text: "Date",
-          value: "date",
-          align: "left"
+          text: 'Date',
+          value: 'date',
+          align: 'left'
         },
-        { text: "City", value: "city", align: "left" },
-        { text: "Description", value: "description", align: "left" }
+        { text: 'City', value: 'city', align: 'left' },
+        { text: 'Description', value: 'description', align: 'left' }
       ],
       details: [
         {
-          date: "2017-01-01 13:20",
-          city: "BANDUNG",
-          description: "WITH DELIVERY COURIER"
+          date: '2017-01-01 13:20',
+          city: 'BANDUNG',
+          description: 'WITH DELIVERY COURIER'
         }
       ]
-    };
+    }
   }
-};
+}
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
