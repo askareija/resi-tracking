@@ -1,5 +1,5 @@
 <template>
-  <v-flex lg6 class="pr-3">
+  <v-flex>
     <v-card>
       <v-card-title class="font-weight-bold green white--text">
         <v-icon left>description</v-icon>

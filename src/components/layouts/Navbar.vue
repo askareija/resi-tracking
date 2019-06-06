@@ -11,18 +11,18 @@ import Sidebar from './Sidebar'
 
 export default {
   props: ['links'],
-  data() {
-    return {
-      drawer: true
-    }
-  },
   components: {
     Topbar,
     Sidebar
   },
   methods: {
     toggleSidebar() {
-      this.drawer = !this.drawer
+      this.$store.dispatch('toggleSidebar')
+    }
+  },
+  computed: {
+    drawer() {
+      return this.$store.state.drawer
     }
   }
 }

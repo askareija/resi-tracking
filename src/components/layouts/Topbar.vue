@@ -17,7 +17,7 @@
         </template>
 
         <v-list>
-          <v-list-tile>
+          <v-list-tile router to="/track_history">
             <v-list-tile-title>
               <v-icon left>receipt</v-icon>
               <span>Track History</span>

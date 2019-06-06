@@ -4,6 +4,10 @@ const mutations = {
   },
   UPDATE_THEME(state, val) {
     state.theme = val
+  },
+  SET_RECEIPT_FORM_DATA(state, noResi, expType) {
+    state.noResi = noResi
+    state.expType = expType
   }
 }
 
