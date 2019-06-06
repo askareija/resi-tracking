@@ -9,7 +9,7 @@
     <!-- Judul -->
     <p class="headline">Track Receipt</p>
 
-    <TrackForm />
+    <TrackForm :submitData="cekresi" :noResi="noResi" />
 
     <!-- <TrackHeaderStatus class="mt-5" v-bind:receipts="receipts" /> -->
     <v-layout wrap class="mt-5">
@@ -34,8 +34,15 @@ export default {
       ]
     }
   },
+  computed: {
+    noResi() {
+      return this.$store.state.noResi
+    }
+  },
   methods: {
-    cekresi() {}
+    cekresi() {
+      this.$store.dispatch('setReceiptFormData', this.noResi, this.expType)
+    }
   },
   components: {
     TrackForm,

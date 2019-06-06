@@ -3,6 +3,8 @@
     <v-select
       :items="expedition_type_items"
       label="Expedition Type"
+      :rules="[v => !!v || 'Expedition Type is required']"
+      required
       @input="setSelected"
     ></v-select>
   </div>
@@ -28,7 +30,7 @@ export default {
   },
   methods: {
     setSelected(value) {
-      alert(value)
+      this.$store.commit('SET_EXP_TYPE', value)
     }
   }
 }

@@ -5,8 +5,11 @@ const actions = {
   toggleSidebar({ commit }) {
     commit('TOGGLE_SIDEBAR')
   },
-  setReceiptFormData({ commit }, noResi, expType) {
-    commit('SET_RECEIPT_FORM_DATA', noResi, expType)
+  setNoResi({ commit }, noResi) {
+    commit('SET_NO_RESI', noResi)
+  },
+  setExpType({ commit }, expType) {
+    commit('SET_EXP_TYPE', expType)
   }
 }
 
