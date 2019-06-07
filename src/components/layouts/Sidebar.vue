@@ -25,7 +25,12 @@
 
 <script>
 export default {
-  props: ['drawer'],
+  props: {
+    drawer: {
+      type: Boolean,
+      default: true
+    }
+  },
   data() {
     return {
       loggedIn: true,
