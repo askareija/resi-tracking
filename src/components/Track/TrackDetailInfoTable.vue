@@ -5,7 +5,7 @@
         <v-icon left>description</v-icon>
         <span>Track Information Details</span>
       </v-card-title>
-      <v-data-table :headers="headers" :items="details" :search="search">
+      <v-data-table :headers="headers" :items="receiptDetail" :search="search">
         <template v-slot:items="props">
           <td>{{ props.item.date }}</td>
           <td>{{ props.item.city }}</td>
@@ -18,6 +18,11 @@
 
 <script>
 export default {
+  props: {
+    receiptDetail: {
+      type: Array
+    }
+  },
   data() {
     return {
       search: '',
@@ -29,13 +34,6 @@ export default {
         },
         { text: 'City', value: 'city', align: 'left' },
         { text: 'Description', value: 'description', align: 'left' }
-      ],
-      details: [
-        {
-          date: '2017-01-01 13:20',
-          city: 'BANDUNG',
-          description: 'WITH DELIVERY COURIER'
-        }
       ]
     }
   }

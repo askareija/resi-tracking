@@ -4,7 +4,7 @@ const state = {
   theme: 'dark',
   noResi: '',
   expType: '',
-  receipt: [],
+  receipt: {},
   receiptDetail: []
 }
 

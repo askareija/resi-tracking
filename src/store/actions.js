@@ -10,6 +10,9 @@ const actions = {
   },
   setExpType({ commit }, expType) {
     commit('SET_EXP_TYPE', expType)
+  },
+  setReceipt({ commit }, receipt) {
+    commit('SET_RECEIPT', receipt)
   }
 }
 

@@ -30,6 +30,8 @@
 
 <script>
 import ExpeditionTypeItems from './ExpeditionTypeItems'
+import axios from 'axios'
+
 export default {
   data() {
     return {
@@ -51,12 +53,29 @@ export default {
       set(value) {
         this.$store.commit('SET_NO_RESI', value)
       }
+    },
+    expType: {
+      get() {
+        return this.$store.state.expType
+      }
     }
   },
   methods: {
-    validate() {
+    async validate() {
       if (this.$refs.form.validate()) {
-        alert('The form is valid')
+        await axios
+          .post('http://localhost:3000/tracks', {
+            no_resi: this.noResi,
+            expedition_type: this.expType
+          })
+          .then(response => {
+            this.$store.dispatch('setReceipt', response.data)
+          })
+          .catch(error => {
+            alert(
+              'Receipt not found or something wrong with the expedition server'
+            )
+          })
       }
     }
   }

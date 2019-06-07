@@ -9,12 +9,20 @@
     <!-- Judul -->
     <p class="headline">Track Receipt</p>
 
-    <TrackForm :submitData="cekresi" :noResi="noResi" />
+    <TrackForm />
 
     <!-- <TrackHeaderStatus class="mt-5" v-bind:receipts="receipts" /> -->
     <v-layout wrap class="mt-5">
-      <TrackGeneralInfoTable class="mb-5" />
-      <TrackDetailInfoTable class="mb-5" />
+      <TrackGeneralInfoTable
+        class="mb-5"
+        :receipt="receipt"
+        v-if="receipt != ''"
+      />
+      <TrackDetailInfoTable
+        class="mb-5"
+        :receiptDetail="receipt.details"
+        v-if="receipt != null"
+      />
     </v-layout>
   </div>
 </template>
@@ -35,15 +43,11 @@ export default {
     }
   },
   computed: {
-    noResi() {
-      return this.$store.state.noResi
+    receipt() {
+      return this.$store.state.receipt
     }
   },
-  methods: {
-    cekresi() {
-      this.$store.dispatch('setReceiptFormData', this.noResi, this.expType)
-    }
-  },
+  methods: {},
   components: {
     TrackForm,
     // TrackHeaderStatus,

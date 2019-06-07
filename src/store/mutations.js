@@ -10,6 +10,9 @@ const mutations = {
   },
   SET_EXP_TYPE(state, expType) {
     state.expType = expType
+  },
+  SET_RECEIPT(state, receipt) {
+    state.receipt = receipt
   }
 }
 
