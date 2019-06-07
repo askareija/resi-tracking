@@ -34,16 +34,6 @@ export default {
         },
         { text: 'City', value: 'city', align: 'left' },
         { text: 'Description', value: 'description', align: 'left' }
-<<<<<<< HEAD
-      ],
-      details: [
-        {
-          date: '2017-01-01 13:20',
-          city: 'BANDUNG',
-          description: 'WITH DELIVERY COURIER'
-        }
-=======
->>>>>>> 4-tracking-function
       ]
     }
   }

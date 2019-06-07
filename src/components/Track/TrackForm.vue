@@ -5,11 +5,8 @@
       <v-flex xs12 sm6 md6 px-2>
         <v-text-field
           :counter="25"
-<<<<<<< HEAD
-=======
           v-model="noResi"
           :rules="noResiRules"
->>>>>>> 4-tracking-function
           label="Receipt Number"
           required
         ></v-text-field>
@@ -33,11 +30,8 @@
 
 <script>
 import ExpeditionTypeItems from './ExpeditionTypeItems'
-<<<<<<< HEAD
-=======
 import axios from 'axios'
 
->>>>>>> 4-tracking-function
 export default {
   data() {
     return {
