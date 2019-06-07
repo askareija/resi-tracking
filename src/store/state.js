@@ -1,6 +1,4 @@
 const state = {
-  drawer: true,
-  isLoading: false,
   theme: 'dark',
   noResi: '',
   expType: '',

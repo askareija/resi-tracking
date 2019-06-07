@@ -2,7 +2,7 @@
   <v-form ref="form" v-model="valid">
     <v-layout wrap>
       <!-- NO RESI FIELD -->
-      <v-flex xs12 sm6 md6 px-2>
+      <v-flex xs12 sm4 md4 px-2>
         <v-text-field
           :counter="25"
           v-model="noResi"
@@ -25,21 +25,20 @@
 
       <!-- SUBMIT BUTTON -->
       <v-flex xs12 sm2 md2 px-2>
-        <v-btn large class="primary" block :disabled="!valid" @click="validate">
+        <v-btn
+          large
+          class="primary"
+          block
+          :disabled="!valid"
+          @click="validate"
+          :loading="isLoading"
+        >
           <v-icon left>search</v-icon>
           <span>Track</span>
         </v-btn>
       </v-flex>
     </v-layout>
-    <v-btn
-      :disabled="dialog"
-      :loading="dialog"
-      class="white--text"
-      color="purple darken-2"
-      @click="dialog = true"
-      >Start loading</v-btn
-    >
-    <v-dialog v-model="dialog" hide-overlay persistent width="300">
+    <v-dialog v-model="isLoading" hide-overlay persistent width="300">
       <v-card color="primary" dark>
         <v-card-text>
           Please stand by
@@ -61,6 +60,7 @@ import axios from 'axios'
 export default {
   data() {
     return {
+      isLoading: false,
       valid: true,
       noResiRules: [
         v => !!v || 'Receipt Number is required',
@@ -89,6 +89,7 @@ export default {
   methods: {
     async validate() {
       if (this.$refs.form.validate()) {
+        this.isLoading = true
         await axios
           .post('http://localhost:3000/tracks', {
             no_resi: this.noResi,
@@ -96,6 +97,7 @@ export default {
           })
           .then(response => {
             this.$store.dispatch('setReceipt', response.data)
+            this.isLoading = false
           })
           .catch(error => {
             alert(

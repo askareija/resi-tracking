@@ -1,13 +1,5 @@
 <template>
-  <v-navigation-drawer app v-model="drawer" v-if="loggedIn">
-    <v-toolbar class="secondary">
-      <v-list>
-        <v-list-tile>
-          <v-list-tile-title class="title">Main Menu</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-toolbar>
-
+  <v-navigation-drawer app v-model="drawer">
     <v-divider></v-divider>
 
     <v-list class="pt-0">
@@ -25,15 +17,9 @@
 
 <script>
 export default {
-  props: {
-    drawer: {
-      type: Boolean,
-      default: true
-    }
-  },
   data() {
     return {
-      loggedIn: true,
+      drawer: true,
       links: [
         { icon: 'receipt', text: 'Track Receipt', href: '/track_receipt' },
         { icon: 'history', text: 'Track History', href: '/track_history' },
