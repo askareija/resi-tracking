@@ -3,11 +3,11 @@ module.exports = {
   env: {
     node: true
   },
-  'extends': [
+  extends: [
     'plugin:vue/essential',
     'eslint:recommended',
-    "prettier/vue",
-    "plugin:prettier/recommended"
+    'prettier/vue',
+    'plugin:prettier/recommended'
   ],
   rules: {
     'vue/component-name-in-template-casing': ['error', 'PascalCase'],

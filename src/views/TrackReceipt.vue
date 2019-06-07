@@ -9,54 +9,50 @@
     <!-- Judul -->
     <p class="headline">Track Receipt</p>
 
-    <TrackForm/>
+    <TrackForm />
 
-    <TrackHeaderStatus class="mt-5" v-bind:receipts="receipts"/>
+    <!-- <TrackHeaderStatus class="mt-5" v-bind:receipts="receipts" /> -->
     <v-layout wrap class="mt-5">
-      <TrackGeneralInfoTable/>
-      <TrackDetailInfoTable/>
+      <TrackGeneralInfoTable
+        class="mb-5"
+        :receipt="receipt"
+        v-if="receipt != ''"
+      />
+      <TrackDetailInfoTable
+        class="mb-5"
+        :receiptDetail="receipt.details"
+        v-if="receipt != null"
+      />
     </v-layout>
   </div>
 </template>
 
 <script>
-import TrackForm from "@/components/Track/TrackForm";
-import TrackHeaderStatus from "@/components/Track/TrackHeaderStatus";
-import TrackGeneralInfoTable from "@/components/Track/TrackGeneralInfoTable";
-import TrackDetailInfoTable from "@/components/Track/TrackDetailInfoTable";
+import TrackForm from '@/components/Track/TrackForm'
+// import TrackHeaderStatus from '@/components/Track/TrackHeaderStatus'
+import TrackGeneralInfoTable from '@/components/Track/TrackGeneralInfoTable'
+import TrackDetailInfoTable from '@/components/Track/TrackDetailInfoTable'
 
 export default {
   data() {
     return {
-      receipts: {
-        no_resi: "",
-        expedition_type: "",
-        isReceived: false,
-        status: "ON PROCESS",
-        details: [{}]
-      },
-      isLoading: false,
       breadcrumbs: [
-        { text: "Home", disabled: true, href: "/" },
-        { text: "Track Receipt", disabled: false, href: "/" }
+        { text: 'Home', disabled: true, href: '/' },
+        { text: 'Track Receipt', disabled: false, href: '/' }
       ]
-    };
-  },
-  methods: {
-    cekresi() {
-      alert(
-        "No Resi: " +
-          this.receipts.no_resi +
-          ", Tipe Ekspedisi: " +
-          this.receipts.expedition_type
-      );
     }
   },
+  computed: {
+    receipt() {
+      return this.$store.state.receipt
+    }
+  },
+  methods: {},
   components: {
     TrackForm,
-    TrackHeaderStatus,
+    // TrackHeaderStatus,
     TrackGeneralInfoTable,
     TrackDetailInfoTable
   }
-};
+}
 </script>

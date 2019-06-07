@@ -7,7 +7,9 @@
           <span class="title font-weight-light">Expedition Type</span>
         </v-card-title>
 
-        <v-card-text class="headline title">SiCepat Express BEST(1 Hari)</v-card-text>
+        <v-card-text class="headline title"
+          >SiCepat Express BEST(1 Hari)</v-card-text
+        >
       </v-card>
     </v-flex>
     <v-flex md4 lg4 mt-4 pr-3>
@@ -27,7 +29,7 @@
           <span class="title font-weight-light">Status</span>
         </v-card-title>
 
-        <v-card-text class="headline title">{{receipts.status}}</v-card-text>
+        <v-card-text class="headline title">{{ receipts.status }}</v-card-text>
       </v-card>
     </v-flex>
     <v-flex md4 lg4 mt-4 pr-3>
@@ -55,12 +57,11 @@ export default {
     return {
       receiptStatus: {
         title: true,
-        "red--text": true
+        'red--text': true
       }
-    };
+    }
   }
-};
+}
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

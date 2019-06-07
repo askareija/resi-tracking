@@ -25,7 +25,12 @@
 
 <script>
 export default {
-  props: ['drawer'],
+  props: {
+    drawer: {
+      type: Boolean,
+      default: true
+    }
+  },
   data() {
     return {
       loggedIn: true,
@@ -40,5 +45,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

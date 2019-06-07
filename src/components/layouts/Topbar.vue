@@ -8,13 +8,16 @@
         <template v-slot:activator="{ on }">
           <v-btn fab dark icon v-on="on">
             <v-avatar>
-              <v-img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John"/>
+              <v-img
+                src="https://cdn.vuetifyjs.com/images/john.jpg"
+                alt="John"
+              />
             </v-avatar>
           </v-btn>
         </template>
 
         <v-list>
-          <v-list-tile>
+          <v-list-tile router to="/track_history">
             <v-list-tile-title>
               <v-icon left>receipt</v-icon>
               <span>Track History</span>
@@ -34,14 +37,13 @@
 
 <script>
 export default {
-  props: ["drawer"],
+  props: ['drawer'],
   methods: {
     toggleSidebar() {
       this.$emit('toggleSidebar')
     }
-  },
-};
+  }
+}
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
