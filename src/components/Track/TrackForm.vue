@@ -85,7 +85,7 @@ export default {
       if (this.$refs.form.validate()) {
         this.isLoading = true
         await axios
-          .post('https://resi-tracking-api.herokuapp.com/tracks/tracks', {
+          .post('https://resi-tracking-api.herokuapp.com/tracks', {
             no_resi: this.noResi,
             expedition_type: this.expType
           })
