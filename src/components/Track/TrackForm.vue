@@ -99,10 +99,11 @@ export default {
             this.$store.dispatch('setReceipt', response.data)
             this.isLoading = false
           })
-          .catch(error => {
+          .catch(() => {
             alert(
               'Receipt not found or something wrong with the expedition server'
             )
+            this.isLoading = false
           })
       }
     }

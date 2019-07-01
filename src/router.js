@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import TrackHistory from './views/TrackHistory'
 
 Vue.use(Router)
 
@@ -20,11 +19,6 @@ const router = new Router({
           path: '/track_receipt',
           name: 'trackReceipt',
           component: () => import('./views/TrackReceipt.vue')
-        },
-        {
-          path: '/track_history',
-          name: 'trackHistory',
-          component: TrackHistory
         },
         {
           path: '/about',

@@ -12,8 +12,6 @@ export default {
       darkMode: true,
       links: [
         { icon: 'receipt', text: 'Track Receipt', href: '/' },
-        { icon: 'history', text: 'Track History', href: '/track_history' },
-        { icon: 'settings', text: 'Settings', href: '/settings' },
         { icon: 'info', text: 'About', href: '/about' }
       ]
     }

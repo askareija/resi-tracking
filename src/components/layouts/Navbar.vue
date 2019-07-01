@@ -17,21 +17,6 @@
               </v-avatar>
             </v-btn>
           </template>
-
-          <v-list>
-            <v-list-tile router to="/track_history">
-              <v-list-tile-title>
-                <v-icon left>receipt</v-icon>
-                <span>Track History</span>
-              </v-list-tile-title>
-            </v-list-tile>
-            <v-list-tile>
-              <v-list-tile-title>
-                <v-icon left>exit_to_app</v-icon>
-                <span>Logout</span>
-              </v-list-tile-title>
-            </v-list-tile>
-          </v-list>
         </v-menu>
       </v-toolbar-items>
     </v-toolbar>
@@ -66,8 +51,6 @@ export default {
       drawer: true,
       links: [
         { icon: 'receipt', text: 'Track Receipt', href: '/track_receipt' },
-        { icon: 'history', text: 'Track History', href: '/track_history' },
-        { icon: 'settings', text: 'Settings', href: '/settings' },
         { icon: 'info', text: 'About', href: '/about' }
       ]
     }
