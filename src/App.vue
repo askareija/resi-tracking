@@ -9,11 +9,15 @@ export default {
   name: 'App',
   data() {
     return {
-      darkMode: true,
       links: [
         { icon: 'receipt', text: 'Track Receipt', href: '/' },
         { icon: 'info', text: 'About', href: '/about' }
       ]
+    }
+  },
+  computed: {
+    darkMode() {
+      return this.$store.state.darkMode
     }
   }
 }

@@ -6,18 +6,14 @@
       <v-toolbar-title>Resi Tracking</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class>
-        <v-menu transition="slide-y-transition" bottom>
+        <v-tooltip bottom>
           <template v-slot:activator="{ on }">
-            <v-btn fab dark icon v-on="on">
-              <v-avatar>
-                <v-img
-                  src="https://cdn.vuetifyjs.com/images/john.jpg"
-                  alt="John"
-                />
-              </v-avatar>
+            <v-btn icon @click="setDarkMode" v-on="on">
+              <v-icon>opacity</v-icon>
             </v-btn>
           </template>
-        </v-menu>
+          <span>Switch Dark Mode</span>
+        </v-tooltip>
       </v-toolbar-items>
     </v-toolbar>
 
@@ -58,6 +54,9 @@ export default {
   methods: {
     toggleSidebar() {
       this.$store.dispatch('toggleSidebar')
+    },
+    setDarkMode() {
+      this.$store.dispatch('setDarkMode')
     }
   }
 }

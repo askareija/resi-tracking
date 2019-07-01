@@ -1,5 +1,5 @@
 const state = {
-  theme: 'dark',
+  darkMode: true,
   noResi: '',
   expType: '',
   receipt: {},

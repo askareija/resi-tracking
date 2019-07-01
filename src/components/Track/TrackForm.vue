@@ -16,15 +16,9 @@
       <v-flex xs12 sm4 md4 px-2>
         <ExpeditionTypeItems />
       </v-flex>
-      <v-flex xs12 sm2 md2 px-2>
-        <v-btn large class="secondary" block>
-          <v-icon left>chrome_reader_mode</v-icon>
-          <span>History</span>
-        </v-btn>
-      </v-flex>
 
       <!-- SUBMIT BUTTON -->
-      <v-flex xs12 sm2 md2 px-2>
+      <v-flex xs12 sm4 md4 px-2>
         <v-btn
           large
           class="primary"

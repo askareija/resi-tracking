@@ -1,6 +1,6 @@
 const actions = {
-  updateTheme({ commit }, val) {
-    commit('UPDATE_THEME', val)
+  setDarkMode({ commit }, val) {
+    commit('SET_DARK_MODE', val)
   },
   setNoResi({ commit }, noResi) {
     commit('SET_NO_RESI', noResi)

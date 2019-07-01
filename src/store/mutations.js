@@ -1,6 +1,6 @@
 const mutations = {
-  UPDATE_THEME(state, val) {
-    state.theme = val
+  SET_DARK_MODE(state) {
+    state.darkMode = !state.darkMode
   },
   SET_NO_RESI(state, noResi) {
     state.noResi = noResi
