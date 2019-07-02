@@ -4,7 +4,7 @@ Expedition tracker is a web-based expedition package tracking application. This 
 
 But this is only for frontend, which means that this is only a display, where for processing receipt data tracking is on a separate project, which is called API. This application will not work if the API is closed, dead or the API used is not suitable.
 
-You can take the API from the Expedition Tracker application at https://gitlab.com/ananmaneki77/expedition-tracker-backend
+You can take the API from the Expedition Tracker application at https://github.com/askareija/resi-tracking-api
 
 ## Project setup
 
