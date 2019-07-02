@@ -46,7 +46,7 @@ export default {
     return {
       drawer: true,
       links: [
-        { icon: 'receipt', text: 'Track Receipt', href: '/track_receipt' },
+        { icon: 'receipt', text: 'Track Receipt', href: '/' },
         { icon: 'info', text: 'About', href: '/about' }
       ]
     }
