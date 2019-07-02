@@ -10,7 +10,7 @@ Vue.prototype.$http = Axios
 Vue.config.productionTip = false
 
 const token = localStorage.getItem('token')
-const API_URL = 'http://localhost:3000'
+const API_URL = 'https://resi-tracking-api.herokuapp.com'
 
 export default Axios.create({
   baseURL: API_URL,

@@ -13,11 +13,6 @@ const router = new Router({
       children: [
         {
           path: '/',
-          redirect: '/track_receipt'
-        },
-        {
-          path: '/track_receipt',
-          name: 'trackReceipt',
           component: () => import('./views/TrackReceipt.vue')
         },
         {
