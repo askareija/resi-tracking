@@ -10,7 +10,7 @@ export default {
   data() {
     return {
       links: [
-        { icon: 'receipt', text: 'Track Receipt', href: '/' },
+        { icon: 'receipt', text: 'Receipt Tracker', href: '/' },
         { icon: 'info', text: 'About', href: '/about' }
       ]
     }
